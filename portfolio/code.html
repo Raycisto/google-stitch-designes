@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DIVYANSHU KAPRAWAN | Portfolio '26</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#001d36",
+                      "surface-container-highest": "#333537",
+                      "surface-container-low": "#1a1c1e",
+                      "background": "#0a0a0a",
+                      "tertiary": "#edbe84",
+                      "on-primary": "#0c334f",
+                      "inverse-surface": "#e3e2e5",
+                      "primary": "#a8caed",
+                      "on-surface": "#e3e2e5",
+                      "on-tertiary": "#462a00",
+                      "error-container": "#93000a",
+                      "primary-fixed": "#cee5ff",
+                      "outline": "#8c9198",
+                      "on-surface-variant": "#c2c7ce",
+                      "on-secondary-container": "#8ac0fd",
+                      "surface-container": "#1e2022",
+                      "surface-container-lowest": "#0d0e10",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#604012",
+                      "surface-variant": "#333537",
+                      "on-background": "#e3e2e5",
+                      "on-secondary-fixed-variant": "#00497d",
+                      "surface-container-high": "#292a2c",
+                      "on-tertiary-fixed": "#2a1800",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#42474d",
+                      "tertiary-fixed": "#ffddb6",
+                      "on-primary-fixed-variant": "#274967",
+                      "secondary-fixed-dim": "#9ecaff",
+                      "surface": "#121316",
+                      "on-secondary": "#003258",
+                      "inverse-primary": "#406180",
+                      "surface-tint": "#a8caed",
+                      "on-primary-container": "#1b3f5c",
+                      "on-tertiary-container": "#543607",
+                      "on-error": "#690005",
+                      "tertiary-container": "#cb9f68",
+                      "tertiary-fixed-dim": "#edbe84",
+                      "inverse-on-surface": "#2f3033",
+                      "surface-bright": "#38393c",
+                      "secondary": "#9ecaff",
+                      "surface-dim": "#121316",
+                      "secondary-container": "#004e84",
+                      "primary-fixed-dim": "#a8caed",
+                      "primary-container": "#89aacc",
+                      "on-primary-fixed": "#001d33",
+                      "secondary-fixed": "#d1e4ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "section-gap": "160px",
+                      "container-max": "1200px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "display-xl": ["Instrument Serif"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Instrument Serif"],
+                      "headline-md": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "display-xl": ["84px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                      "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                      "display-lg": ["64px", { "lineHeight": "1.1", "fontWeight": "400" }],
+                      "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+              }
+            },
+          },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.glass-card {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(31, 31, 31, 1)
+    }
+.halftone-overlay {
+    background-image: radial-gradient(rgba(137, 170, 204, 0.1) 1px, transparent 0);
+    background-size: 4px 4px
+    }
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+        } 100% {
+        transform: translateX(-50%);
+        }
+    }
+.animate-marquee {
+    display: flex;
+    width: 200%;
+    animation: marquee 20s linear infinite
+    }
+@keyframes marqueeVertical {
+    0% {
+        transform: translateY(0);
+        } 100% {
+        transform: translateY(-50%);
+        }
+    }
+.animate-marquee-vertical {
+    animation: marqueeVertical 30s linear infinite
+    }
+.loading-bar-fill {
+    background: linear-gradient(to right, #89AACC, #4E85BF);
+    width: 100%;
+    animation: loadingProgress 3s ease-in-out forwards
+    }
+@keyframes loadingProgress {
+    0% {
+        width: 0%;
+        } 100% {
+        width: 100%;
+        }
+    }
+.cosmic-bg {
+    background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #16213e 50%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden
+    }
+.cosmic-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD0V86Ipmm-r2y-ZL2i7q-0WOXsFkuE8BcBqqGzhFVovuGAjFugxe2quli5AxnwWH4Yvdld3vxjLTUpUS7n4Zw9DXGOreNXPKtHr53EKvgxGua0iekBSuEq1y5Ud4Ze7taFwODmlgeOdwtfsiTVTMNoQa5b650-BdqghFBGkDHl7rOy9aVSrklnsQA7uLVTycFvWcWG8fAXhq-TC7cH5gQIhE1hkkts8KpCw9vpjk5NQrNMx9oaFJ6GBGY9wbIt48LcCU58keQxtyI);
+    opacity: 0.4
+    }
+.floating-card {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s
+    }
+.floating-card:hover {
+    transform: translatey(-20px) rotate(2deg) scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(168, 202, 237, 0.3);
+    z-index: 50
+    }</style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body-md overflow-x-hidden" id="home">
+<!-- Loading Screen -->
+<div class="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center pointer-events-none transition-opacity duration-1000 opacity-0 hidden" id="loader">
+<div class="mb-8">
+<span class="font-display-xl text-display-xl italic text-white opacity-20">DK</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="font-label-sm text-label-sm text-primary tracking-[0.2em] uppercase">Initializing</div>
+<div class="font-display-lg text-display-lg italic text-white">Portfolio</div>
+</div>
+<div class="absolute bottom-0 left-0 h-1 loading-bar-fill"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex items-center gap-8 px-6 py-3 max-w-2xl mx-auto rounded-full mt-6 bg-[#141414]/70 backdrop-blur-3xl border border-[#1f1f1f] shadow-2xl">
+<a class="text-xl font-black text-white bg-gradient-to-br from-[#89AACC] to-transparent rounded-full p-2 scale-95 active:scale-90 transition-transform cursor-pointer" href="#home">
+        DK
+    </a>
+<div class="flex items-center gap-6 font-sans uppercase tracking-widest text-xs text-gray-400">
+<a class="text-white font-bold relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#89AACC] after:rounded-full after:shadow-[0_0_8px_#89AACC] hover:text-white transition-all duration-300" href="#home">Home</a>
+<a class="hover:text-white transition-all duration-300" href="#college">College</a>
+<a class="hover:text-white transition-all duration-300" href="#tech">Tech</a>
+<a class="hover:text-white transition-all duration-300" href="#about">About</a>
+</div>
+<div class="ml-auto font-sans uppercase tracking-widest text-xs text-[#89AACC] cursor-pointer hover:text-white transition-all duration-300">
+<a href="mailto:dkaprawan701@gmail.com">Let's Talk</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<video autoplay="" class="w-full h-full object-cover opacity-40" loop="" muted="" playsinline="">
+<source src="https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8" type="application/x-mpegURL"/>
+<img alt="Atmospheric Dark Background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMq-r6BNRI8l__eEjKdnNeXS7ZnusjKo_NIbMwFqnePvgplRip_-7tPE3_u9PVreNLt0RoRHZTYgwdHcdFSuj1dXmSstnPqdYtwxLwSO7Ic4sui6Dsu39ySXKTL8Fn6MsqokXkTIZSr2p9kbB2Cw0GW1MSsUK5GQdXEMNMdCh-kk2VBFocMgqKujy40GXc6X5esT25W2yDKKQOKmXhZgHoJvjlBWI7giEuP5av_veaWARwad7sPf8zVQEtzhuSgKM_LjG8wBkSJo8"/>
+</video>
+<div class="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background"></div>
+</div>
+<div class="relative z-10 text-center px-gutter max-w-4xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.3em] mb-6 block">Know Me Branding</span>
+<h1 class="font-display-xl text-display-xl italic text-white mb-4">Divyanshu Kaprawan</h1>
+<div class="h-12 overflow-hidden mb-8">
+<div class="font-headline-md text-headline-md text-outline uppercase tracking-tighter">
+                Engineering • Development • Innovation
+            </div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">
+            Aspiring Engineer exploring the boundaries of technology and creativity. Crafting digital solutions with precision and technical rigor.
+        </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="px-10 py-4 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded-full hover:scale-105 transition-transform shadow-lg shadow-primary/20" href="https://github.com/Raycisto" target="_blank">
+                GitHub Portfolio
+            </a>
+<a class="px-10 py-4 border border-outline-variant text-white font-label-sm text-label-sm uppercase rounded-full hover:bg-white/5 transition-colors" href="https://www.instagram.com/divyanshu_701_/" target="_blank">
+                Instagram
+            </a>
+</div>
+</div>
+<a class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity cursor-pointer" href="#college">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</a>
+</section>
+<!-- College Journey & Achievements (Bento) -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto" id="college">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Education</span>
+<h2 class="font-display-lg text-display-lg italic text-white">College Journey</h2>
+</div>
+<p class="font-body-md text-body-md text-outline max-w-md">
+            Academic milestones and professional growth during my time at GEHU-Hill Campus, Bhimtal.
+        </p>
+</div>
+<div class="grid grid-cols-12 gap-6 auto-rows-[300px] md:auto-rows-[400px]">
+<!-- GEHU Card -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden rounded-lg bg-surface-container-low border border-outline-variant/30 glass-card">
+<div class="absolute inset-0 z-0 halftone-overlay opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<img alt="GEHU Hill Campus" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv7G_46mkQuGpzY067er_LsM8wxFCRdmzzjBLhzun-4hHDIdcXpgzpiAj6oMcroUzLnwZq2OHev0A1rk8ABrOZZuxhIxpq1xl-rRECf67mjIrl2dXxxq4Y9XM8z3nh7hDEX2l0P48L_wSXldVQMlOZKh5h_xwGgR4N0z0hVA9mlAsel2zWJDq7Rs_K4vE7nG1h9-OkZU4-Q8YZL9SmN6fUCZCp8iM_1tXRX7TDyEY4cZFxkqd17UACnB4A3l1a1fnRmKzFzU3gVzo"/>
+<div class="absolute bottom-0 left-0 w-full p-10 bg-gradient-to-t from-background to-transparent">
+<span class="font-label-sm text-label-sm text-primary-fixed mb-2 block">B.Tech Mechanical Engineering</span>
+<h3 class="font-headline-md text-headline-md text-white">GEHU-Hill Campus, Bhimtal</h3>
+<p class="text-on-surface-variant mt-2 max-w-lg">Pursuing excellence in core engineering and digital integration since 2022.</p>
+</div>
+</div>
+<!-- Achievement 1 -->
+<div class="col-span-12 md:col-span-4 group relative overflow-hidden rounded-lg bg-surface-container-low border border-outline-variant/30 glass-card">
+<div class="absolute inset-0 z-0 halftone-overlay opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="p-10 flex flex-col h-full justify-between relative z-10">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Milestone</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">President's Scout Award</h3>
+<p class="text-on-surface-variant">Recipient of the prestigious Rajya Puraskar in 2019, demonstrating leadership and service.</p>
+</div>
+</div>
+</div>
+<!-- Schooling -->
+<div class="col-span-12 md:col-span-4 group relative overflow-hidden rounded-lg bg-surface-container-low border border-outline-variant/30 glass-card">
+<div class="absolute inset-0 z-0 halftone-overlay opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="p-10 flex flex-col h-full justify-between relative z-10">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Foundations</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">N.S.S.V.M Haldwani</h3>
+<p class="text-on-surface-variant">Completed primary and secondary schooling with academic honors.</p>
+</div>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden rounded-lg bg-surface-container-low border border-outline-variant/30 glass-card">
+<div class="absolute inset-0 z-0 halftone-overlay opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<img alt="Academic Achievements" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDApLxvVg5tFL5liO1h3pDHeRogjTkzPQXZ_qFQ0cUK0CL304N9Fw3qYzgmROeLAbjOtATVb0cjsyGdnmhGSuxyYDDrH5-CXx_7By363tKzZCe_5gKWN0Rfg7qDfYrnCK8t9vhtPbJwTweihyghO5SF0wK_evGbHfxkeprzUhhUBYkPhuvng80TqYTFtabu3Bm8eITcwUTt0QoOMYG_U0syQwvDnhnwDQrd8bl3uF9H6u9qTzSuGGDujZwqJCNa5gJ4ou308QnXShY"/>
+<div class="absolute bottom-0 left-0 w-full p-10 bg-gradient-to-t from-background to-transparent">
+<span class="font-label-sm text-label-sm text-primary-fixed mb-2 block">Extracurriculars</span>
+<h3 class="font-headline-md text-headline-md text-white">Consistent Achievement</h3>
+<p class="text-on-surface-variant mt-2">Active participation in technical seminars, community service, and leadership roles.</p>
+</div>
+</div>
+<!-- New Project Card 1 -->
+<div class="col-span-12 md:col-span-6 group relative overflow-hidden rounded-lg bg-surface-container-low border border-outline-variant/30 glass-card">
+<div class="absolute inset-0 z-0 halftone-overlay opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="p-10 flex flex-col h-full justify-between relative z-10">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Innovation</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Thermodynamic Simulation</h3>
+<p class="text-on-surface-variant">Analyzing heat transfer models for industrial applications using computational fluid dynamics.</p>
+</div>
+</div>
+</div>
+<!-- New Project Card 2 -->
+<div class="col-span-12 md:col-span-6 group relative overflow-hidden rounded-lg bg-surface-container-low border border-outline-variant/30 glass-card">
+<div class="absolute inset-0 z-0 halftone-overlay opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="p-10 flex flex-col h-full justify-between relative z-10">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Creative Tech</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Automated CAD Optimization</h3>
+<p class="text-on-surface-variant">Developing scripts to automate repetitive tasks in SolidWorks and AutoCAD for faster prototyping.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Explore (Stats/Journal style) -->
+<section class="py-section-gap px-gutter max-w-container-max mx-auto bg-surface-container-lowest border-y border-outline-variant/20" id="tech">
+<div class="mb-20 text-center">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Capabilities</span>
+<h2 class="font-display-lg text-display-lg italic text-white">Tech Explore</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group flex flex-col gap-6 p-8 rounded-xl glass-card border-transparent hover:border-outline-variant/50 transition-all text-center">
+<div class="w-24 h-24 rounded-full overflow-hidden mx-auto border border-outline-variant/20">
+<img alt="Core Tech" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSk_dBzq7LRpYLaVNKmCKP9dj32dLFO36DnG96FI85kQUgZQcBhzfe3B7JslzYLblh1AFUCceUtCMTTaawcL3AWzATFZMBG6sKGPYBoK3TIopeqsWNRb8BsOrq1b9Q2OCAymN4Lld68aOr3hdQfZCgMgywFRu4FU5ExOzZF9Lb_JOTDuB0XiM5PaycV5ZMeC3UeCEjFMZ9UXhYiAlfKuhYM8M8MGQbgHOGJ0vA8Pen05cMnoeVziXhOM_b-gVgrENMW8tQK0ohX10"/>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors mb-2">Mechanical Systems</h3>
+<p class="text-outline">CAD Design, Thermal Dynamics, and Structural Engineering foundations.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-6 p-8 rounded-xl glass-card border-transparent hover:border-outline-variant/50 transition-all text-center">
+<div class="w-24 h-24 rounded-full overflow-hidden mx-auto border border-outline-variant/20">
+<img alt="Development" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDALL6yKYeHd0V8pNKqCpQleh1KLFT3BfSQIRklzdHCkHVQOQ3t0Cu9_kIGaaEttO0Lb-T3IOJa2Lg-lCUzWTUk1IdoxQbbwNQ_hdA7yAxzMZhT-yxRAF87mYxb3V_sw3HBXlt3lCA4aHqo8LtYxcwrBE2Loe1YkG-g8QSh2SxvFfWVFv0c_jF0R0beAHEw6UP_VEmyeYAh8a3-3yVBOgjlxaZAWjw6Nx7HCOSkG1XQlvlCiFiNXd3O-xCMffqAF_bma3doC1O1zcg"/>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors mb-2">Digital Integration</h3>
+<p class="text-outline">Exploring Frontend Development, Web Technologies, and UI/UX Principles.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-6 p-8 rounded-xl glass-card border-transparent hover:border-outline-variant/50 transition-all text-center">
+<div class="w-24 h-24 rounded-full overflow-hidden mx-auto border border-outline-variant/20">
+<img alt="AI/ML" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0D65t3_8u4K-3hCj_hR-8_j9f5W6-XN_5M-7m6XvP-I_o1p0H-5O6jF_l5n4-W3u4O7m6XvP-I_o1p0H-5O6jF_l5n4-W3u4O7m6XvP-I_o1p0H-5O6jF_l"/>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors mb-2">AI Implementation</h3>
+<p class="text-outline">Leveraging AI tools for engineering research and workflow automation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Playground (Gallery Style Restyled) -->
+<section class="py-section-gap cosmic-bg relative overflow-hidden" id="about">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="grid grid-cols-4 gap-8 rotate-12 -translate-y-24">
+<div class="flex flex-col gap-8 animate-marquee-vertical" style="animation-duration: 30s;">
+<img alt="Personal Side" class="w-full aspect-square rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuOastb_Y5TPsZdXDtJe8Ythv9Q7X6NacVoGtrIyiJDsv0dJmck8ZBjOvrcShkfvVhUb0lPTOQ2wcknbi5_4Pqixy04ft5yoLq1SZXwma7fhMImfVWiBfVYFqJDe46tWye-GoWnXvfhgrdbaj-_F5diWO1dyxaYq2f2rc7P4-Cgeill3yqpR5MfGK1UEfBe7y7gCTtRrfrJtYLdIehgUJ6fIsN32BQ8_OPmHikOOAd2y8tU1FZrV_i_JHZlBPLscUVRV7_oTTzSzM"/>
+<img alt="Personal Side" class="w-full aspect-square rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPWbt4_R_F0rKZJrlQvdLGzA_o3TFhUi0ZT4tDu41CzCarz2JJTmni8isDPz8Oyv3o7TuDUf74BqzW-IXZtrSSm6GRmNbH9-WQ2l0gOMt239UI19fx3EY3bTv1yy6v1sGK120k6GExoQdd7oYDBBvCBSxOSqZFA05A0gFUrSzBjmIoij6S23dcP-AhD-5UWPeeXT2Jo4DJdpzn961z3eFSjBavF4YL1bAGgo3rjKEXi1QGDWm8YjYFZU0ZwmPZtop8J-KXtZcZ-Ak"/>
+</div>
+<div class="flex flex-col gap-8 animate-marquee-vertical" style="animation-duration: 45s; animation-direction: reverse;">
+<img alt="Personal Side" class="w-full aspect-square rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOXCZ7mb2MP3GGZm98_1AX1Ec5DGPvCeR_mI5ubMBDgHuEmdk_-aWtGXv35CxF_4OqoW5y5_CFzAEZXNLBk8aGM_tZ9gW9OxUuk6wmt9MHPT2ex-yHSoJXqPyDDIfUJGi-m4pNCN8pNVf6PaYNxzhnm0oeXGtW9mAptZF9UYDRt_ERc5--2lyuLpcVAXqEzFNPd_ifnPz9_72JVdx50lUbAecXr_eTFk7S0oSI5Lw0mBR0-8SFNm8_AdzAV96P5ZS0jkcN_3ZRm1A"/>
+<img alt="Personal Side" class="w-full aspect-square rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMvWD0n7aCYpwXel73uLVLZlmqTwV5BPQV3P9nirjLhQQ7ci-3cLyAs_oolZ7UomIzfZBVz9fzBwsA-ZaCjnIIcN1SDHyIe3PcmA3MNFjz0iDUDGrjBoQSKjKFgAzR_qe-LZEUwRJ6Lu_E8YJiYsdmhPHHUHtXMemed2i9HZKVS660Ng2PPoppPPXYSn2cGks6KOfC_Tzo41WX8cwrpWrCEl_TM9UVfXGtzU8wJzD1xEjPMv2jT91m1CBCZF90Tt7PLTpGXDzngTc"/>
+</div>
+</div>
+</div>
+<!-- Floating Interactive Image Cards -->
+<div class="relative z-20 px-gutter max-w-container-max mx-auto py-20">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-[0.4em] mb-4 block">Visual Playground</span>
+<h2 class="font-display-xl text-display-xl italic text-white">Creative Nebula</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<a class="floating-card group relative block h-[450px] rounded-xl overflow-hidden shadow-2xl" href="https://github.com/Raycisto" target="_blank">
+<img alt="Nebula Project 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWAZ1JxmBeX7ytfcNZ3LvY3Yv7uuSf4Mf0TkDkB3VkBVMCPzhY_qBfFPkxQUicCCV7I0PBK_Ty7p5TrIczSI4cuZQz1cZdN96_Jj4iGqpNzoHaYPkE_usjp1_BbF1Bioq5rzxyYreapXtdDOdcAEKiADU4Z8P1UDmg9dllNUokVqk0GS4S03TRAqDzMGNAsQgiG2SIrUiiz78oj-xGORqqg2m0JxO5bRxExgzImX7VLLHN0kz9exWRYV4D74-t7EYi4g7aFyH4bb0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<span class="text-primary font-label-sm tracking-widest mb-2">PROJECT ALPHA</span>
+<h4 class="text-white font-headline-md leading-tight">Geometric Explorations</h4>
+</div>
+</a>
+<a class="floating-card group relative block h-[450px] rounded-xl overflow-hidden shadow-2xl md:mt-12" href="https://github.com/Raycisto" target="_blank">
+<img alt="Nebula Project 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcxdPh_KFlkdy_4mYk6LPDfPYOjaHM61FrGE_Gic7tHjvL-cYbgoTqcZMfeBL5M5CsRKjaBEzTc_S0_BN41k2GnOn1d6J3pb4MAITTRSU1Pr9ocw-SbNSDVGc-Y0duUJJ1tFS7O6PFZCFAE48PNifLPnpFAR0wzxFT5LBmH2hMqDKHpuNo6uAMwEn_Dgr5cloUWPDNQpP83Wb5nM2U3ZatdlUSo6HRg8pLePSF8kchN22_PJOXLwzRqrKxKT8hPN3BdvYPCq3rJlM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<span class="text-primary font-label-sm tracking-widest mb-2">PROJECT BETA</span>
+<h4 class="text-white font-headline-md leading-tight">Digital Sculptures</h4>
+</div>
+</a>
+<a class="floating-card group relative block h-[450px] rounded-xl overflow-hidden shadow-2xl" href="https://github.com/Raycisto" target="_blank">
+<img alt="Nebula Project 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM8_g22SjzkoaesjV5PU_J6J-iYRHUucy9ml55vRL2FKj9WcPl-im4lLVAzPywfeA8a5Plg2Ij5ntIHiu8TT-XDnd3MzMRi4CwAYLRELjBxvVj1c6VnBdw2cmTaDMalEYmxpMNGa5SfTukbozUfRr3ve1LUjHhY7iYsAGib8HTKpWD4m1B7O-ErrOOztTDqDp8eSifqWjqWY3_hQWBG2GaSJZBdcgjNoBBQ4WegxxJtjl4Gn5z0SaI0dM7svEbGiuMKAHC4ClETxI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex flex-col justify-end p-8">
+<span class="text-primary font-label-sm tracking-widest mb-2">PROJECT GAMMA</span>
+<h4 class="text-white font-headline-md leading-tight">Abstract Dynamics</h4>
+</div>
+</a>
+</div>
+<div class="mt-32 flex flex-col items-center justify-center text-center">
+<p class="font-body-lg text-body-lg text-outline max-w-2xl mx-auto mb-12">
+                Beyond engineering, I am a creator driven by curiosity. I believe in continuous learning and the power of multidisciplinary thinking to solve complex problems.
+            </p>
+<div class="flex gap-4">
+<button class="px-8 py-3 rounded-full border border-outline-variant hover:border-primary transition-all">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Get Resume</span>
+</button>
+<a class="group flex items-center gap-4 px-8 py-3 rounded-full bg-primary text-on-primary hover:scale-105 transition-all" href="mailto:dkaprawan701@gmail.com">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Email Me</span>
+<span class="material-symbols-outlined text-on-primary">mail</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative bg-background overflow-hidden border-t border-outline-variant/10">
+<div class="absolute inset-0 z-0 scale-y-[-1] opacity-20 pointer-events-none">
+<video autoplay="" class="w-full h-full object-cover grayscale" loop="" muted="" playsinline="">
+<source src="https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8" type="application/x-mpegURL"/>
+</video>
+</div>
+<!-- Marquee -->
+<div class="relative z-10 py-12 border-y border-outline-variant/10 overflow-hidden bg-background/50 backdrop-blur-md">
+<div class="animate-marquee whitespace-nowrap">
+<span class="font-display-lg text-display-lg italic text-outline/30 uppercase mx-8">Always Learning • </span>
+<span class="font-display-lg text-display-lg italic text-outline/30 uppercase mx-8">Building the Future • </span>
+<span class="font-display-lg text-display-lg italic text-outline/30 uppercase mx-8">Always Learning • </span>
+<span class="font-display-lg text-display-lg italic text-outline/30 uppercase mx-8">Building the Future • </span>
+</div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-8 py-20 flex flex-col items-center text-center">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.4em] mb-8 block">Interested in collaborating?</span>
+<a class="font-serif italic text-4xl mb-8 block font-display-xl text-white hover:text-primary transition-colors hover:scale-105 transform duration-500" href="mailto:dkaprawan701@gmail.com">
+                Lets Talk
+            </a>
+</div>
+<div class="w-full border-t border-[#1f1f1f] pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-white font-bold text-xl">
+                DK <span class="text-outline font-normal text-sm ml-2">© 2024 Divyanshu Kaprawan.</span>
+</div>
+<div class="flex items-center gap-8">
+<a class="text-gray-500 hover:text-[#89AACC] hover:translate-x-1 transition-transform cursor-pointer font-label-sm text-label-sm uppercase tracking-widest" href="mailto:dkaprawan701@gmail.com">Gmail</a>
+<a class="text-gray-500 hover:text-[#89AACC] hover:translate-x-1 transition-transform cursor-pointer font-label-sm text-label-sm uppercase tracking-widest" href="https://www.instagram.com/divyanshu_701_/" target="_blank">Instagram</a>
+<a class="text-gray-500 hover:text-[#89AACC] hover:translate-x-1 transition-transform cursor-pointer font-label-sm text-label-sm uppercase tracking-widest" href="https://github.com/Raycisto" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Loader functionality
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        loader.classList.remove('hidden');
+        loader.classList.add('opacity-100');
+        
+        setTimeout(() => {
+            loader.classList.replace('opacity-100', 'opacity-0');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 1000);
+        }, 2000);
+    });
+
+    // Smooth Scroll for all internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            e.preventDefault();
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+</body></html>
